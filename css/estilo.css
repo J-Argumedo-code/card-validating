@@ -4,7 +4,7 @@
 }
 
 body{
-    height: 100vh;
+    height: 100%;
     background-image: url(../resources/cubo.jpg);
     background-repeat: no-repeat; 
     background-size: cover;
@@ -21,6 +21,13 @@ body{
 }
 .contenedor2{
     background: linear-gradient(90deg, rgb(39, 39, 39), #74c281);
+}
+
+.contenedor1, .contenedor2{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
@@ -74,14 +81,13 @@ input:valid{
     border: 2.5px solid rgb(23, 194, 0);
 }
 
-.desaparecer{
-    display: none;
-}
+
 
 
 .card1{
+    height: 80vh;
+    width: 80vw;
     background-color: transparent;
-    height: 100vh;
     color: white;
 
     display: flex;
@@ -104,9 +110,28 @@ input:valid{
 
 .animacion{
     animation: slide 2s;
-  }
+}
+
+.desaparecer{
+    display: none;
+}
   
 @keyframes slide{
     0% {margin-top: -80%;}
     100% {margin-top: 0%;}
+}
+
+@media screen and (max-width: 575.9px){
+    .contenedor2 .card1{
+        height: 65vh;
+        padding-top: 20px;
+    }
+    .contenedor1 .card1{
+        height: 70vh;
+        padding-bottom: 20px;
+    }
+
+    .desaparecer{
+        display: none;
+    }
 }

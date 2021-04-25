@@ -5,21 +5,26 @@
 
 body{
     height: 100vh;
+    background-image: url(../resources/cubo.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: brightness(70%);
 }
 
 .contenedor{
     height: 100%;
-    background-image: url(../resources/cubo.jpg); 
-    background-size: 100% 103%;
 }
 .contenedor1{
-    background: linear-gradient(90deg, rgb(39, 39, 39), #74c281bb);
+    background: linear-gradient(90deg, rgba(44, 44, 44), #b64848);
 }
 .contenedor2{
-    background: linear-gradient(90deg, rgba(44, 44, 44, 0.973), #b64848de);
+    background: linear-gradient(90deg, rgb(39, 39, 39), #74c281);
 }
 
-#todo{
+
+.todo{
     height: 100vh;
     margin: 0px;
     background-color: transparent;
@@ -27,7 +32,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 form{
@@ -40,7 +45,6 @@ form{
 .h1class{
     font-weight: lighter;
 }
-
 
 .form-control:focus{
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
@@ -70,14 +74,13 @@ input:valid{
     border: 2.5px solid rgb(23, 194, 0);
 }
 
-
-
 .desaparecer{
     display: none;
 }
 
 
 .card1{
+    background-color: transparent;
     height: 100vh;
     color: white;
 
@@ -94,9 +97,8 @@ input:valid{
     justify-content: space-evenly;
 }
 
-.textt{
-    display: flex;
-    flex-direction: row;
+.card-text{
+    text-align: justify;
 }
 
 
@@ -107,32 +109,4 @@ input:valid{
 @keyframes slide{
     0% {margin-top: -80%;}
     100% {margin-top: 0%;}
-}
-
-
-
-/*Responsive*/
-@media screen and (max-width: 575px){
-    #contenedor{
-        background-size: 180% 100%;
-    }
-}
-
-@media screen and (min-width: 576px) and (max-width: 767px){
-    #contenedor{
-        background-size: 165% 100%;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px){
-    #contenedor{
-        background-size: 140% 100%;
-    }
-}
-
-
-@media screen and (min-width: 992px) and (max-width: 1199px){
-    #contenedor{
-        background-size: 120% 100%;
-    }
 }
